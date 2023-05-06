@@ -1,0 +1,50 @@
+<!-- <div class="flex justify-center  py-1  mt-10 mb-10 p-10"> -->
+  <h1 class=" text-green-700 text-center pt-5 font-bold text-3xl hover:not-italic italic font-serif tracking-wide	">Login Page</h1>
+<div class=" ">
+  <div class="flex justify-center py-10">
+    <form action="" class="container-fluid" [formGroup]="RegistrationForm" (ngSubmit)="onsubmit()">
+
+      <div class="pb-3">
+        <label class="pb-2" for="">First Name</label><br />
+        <input type="text" class="border outlinefa-border focus:outline-none border p-4 outline-none" placeholder="First Name" formControlName="FirstName" [ngClass]="{'@error(FisrtName) border-red-500 @enderror':submit&&f.FirstName.errors}"/>
+        <div *ngIf="submit&&f.FirstName.errors" >
+          <span *ngIf="f.FirstName.errors" class="text-rose-700"> First Name is required</span>
+        </div>
+
+      </div>
+
+      <div class="pb-3">
+        <label for="">Last Name</label><br />
+        <input type="text" class="border outlinefa-border focus:outline-none border p-4 outline-none" placeholder="Last Name" formControlName="LastName" [ngClass]="{'@error(LastName) border-red-500 @enderror':submit&&f.LastName.errors}" />
+        <div *ngIf="submit&&f.LastName.errors" >
+          <span *ngIf="f.LastName.errors" class="text-rose-700"> Last Name is required</span>
+        </div>
+      </div>
+
+      <div class="pb-3">
+        <label for="">Phone</label><br />
+        <input type="number" class="border outlinefa-border focus:outline-none border p-4 outline-none" placeholder="Phone Number" formControlName="Phone" [ngClass]="{'@error(Phone) border-red-500 @enderror':submit&&f.Phone.errors}" />
+
+        <div *ngIf="submit&&f.Phone.errors" >
+          <span *ngIf="f.Phone.errors" class="text-rose-700"> only 10 digits</span>
+        </div>
+      </div>
+
+      <div class="pb-3">
+        <label for="">Email</label><br>
+        <input type="email" class="border outlinefa-border focus:outline-none border p-4 outline-none" placeholder="Email" formControlName="Email" [ngClass]="{'@error(Email) border-red-500 @enderror':submit&&f.Email.errors}" />
+
+        <div *ngIf="submit&&f.Email.errors" >
+          <span *ngIf="f.Email.errors" class="text-rose-700"> Invalid Email Id</span>
+        </div>
+      </div>
+
+      <div class="pb-3">
+        <button class="rounded border-5 bg-blue-700 px-2 py-1 text-white">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- </div> -->
+
+
